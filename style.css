@@ -8,10 +8,14 @@ body {
 }
 h1 {
   color: blue;
+  transition: color 0.4s ease-in;
 }
-.active {
+.clicked {
   color: tomato;
 }
 .colorChange {
   color: skyblue;
+}
+.sexy-font {
+  font-family: "Courier New", Courier, monospace;
 }
