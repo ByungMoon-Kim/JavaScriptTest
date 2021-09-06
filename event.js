@@ -23,6 +23,13 @@ HelloTest.addEventListener('click', handleClick);
     // toggle은 h1의 classList에서 clicked class가 있는지 확인해서 존재하면 삭제하고 
     // 존재하지 않다면 classList에 clicked를 추가를 해준다
 
+const HelloTest2 = document.querySelector('.hello2 h2');
+
+function handleClick2() {
+    HelloTest2.classList.toggle('check')
+}
+
+HelloTest2.addEventListener('click', handleClick2);
 // className: 모든걸 교체함 이전에 class들은 상관하지않고 교체함
 // classList: class들의 목록으로 작업할 수 있게끔 허용해줌 = 목록으로 작업을해서 그전에있던 class들을 그대로 냅두고 작동하게해줌
 // ===: 서로 같은지 확인, =: 값을 변경해주는것
