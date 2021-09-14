@@ -1,12 +1,22 @@
+const loginForm = document.querySelector('.form');
 const loginInput = document.querySelector('.form input');
-const loginButton = document.querySelector('.form button');
 
-function ClickButton() {
-    const username = loginInput.value;
-    console.log(username);
+const link = document.querySelector('a');
+    
+function onButtonSubmit(tomato) {
+    tomato.preventDefault(); // preventDefault: 어떤 event의 기본 행동, 발생이 되지않도록 막는다(ex: 새로고침)
+    console.log(loginInput.value);
 }
-loginButton.addEventListener('click', ClickButton);
 
+function handleClickLink(event){
+    event.preventDefault()
+    alert('clicked!')
+    console.dir(event)
+}
+
+// event submit: 엔터를 누르거나 버튼을 클릭 할 떄 이벤트 발생
+loginForm.addEventListener('submit', onButtonSubmit);
+link.addEventListener('click', handleClickLink);
 
 // querySelector 로 id태그를 쓸때는 #를 써야한다 하지만 getElementById 로 id태그를 쓸땐 #를 안써도된다
 // console.dir() 불러온 함수의 내부(엘리먼트)를 자세하게 보여준다
