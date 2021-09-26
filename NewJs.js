@@ -1,12 +1,20 @@
-const loginForm = document.querySelector('.form');
-const loginInput = document.querySelector('.form input');
+const loginForm = document.querySelector('#form');
+const loginInput = document.querySelector('form input');
+const greeting = document.querySelector('#greeting');
+
+const HIDDEN_CLASSNAME = 'hidden' // 문자만 변수로 저장할거면 대문자로 저장하는것이 알아보기쉽다
 
 const link = document.querySelector('a');
     
 function onButtonSubmit(tomato) {
     tomato.preventDefault(); // preventDefault: 어떤 event의 기본 행동, 발생이 되지않도록 막는다(ex: 새로고침)
-    console.log(loginInput.value);
+    loginForm.classList.add(HIDDEN_CLASSNAME) // 클래스 추가
+    const userName = loginInput.value;
+    localStorage.setItem("userName", userName)
+    greeting.innerText=`Hello ${userName}`; // 변수와 문자를 결합하고 싶으면 ${}만 넣으면 끝
+    greeting.classList.remove(HIDDEN_CLASSNAME) // 클래스 삭제
 }
+// localStorage.setItem("저장할것") : 설정한 이름을 저장할수있다
 
 function handleClickLink(event){
     event.preventDefault()
