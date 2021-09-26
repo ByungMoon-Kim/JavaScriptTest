@@ -10,8 +10,9 @@ join.addEventListener('click', EventJoin);
 const Change1 = document.querySelector('.changeText-1')
 const Change2 = document.querySelector('.changeText-2')
 function ChangeText2() {
-    Change1.innerText="변경텍스트"
+    if(Change1){
+        Change1.innerText="텍스트테스트"
 }
-
+}
 // Change1.addEventListener('click', ChangeText);
 Change2.addEventListener('click', ChangeText2)
