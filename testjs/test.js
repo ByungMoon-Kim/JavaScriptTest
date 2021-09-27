@@ -11,8 +11,13 @@ const Change1 = document.querySelector('.changeText-1')
 const Change2 = document.querySelector('.changeText-2')
 function ChangeText2() {
     if(Change1){
-        Change1.innerText="텍스트테스트"
+        Change1.innerText="텍스트"
 }
 }
 // Change1.addEventListener('click', ChangeText);
-Change2.addEventListener('click', ChangeText2)
+Change2.addEventListener('click', ChangeText2);
+
+// typeof: 사용되는 형식을 찾는다 ex)string, number
+n = '838102050'
+console.log('n = ' + n + ', and is a ' + typeof n)
+// = n = 838102050, and is a string
