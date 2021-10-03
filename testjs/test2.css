@@ -1,0 +1,12 @@
+.number {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background-color: #ffb611;
+  font-size: 100px;
+  list-style: none;
+  text-align: center;
+  margin-top: 50px;
+  color: #333;
+  border-radius: 50%;
+}
